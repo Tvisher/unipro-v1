@@ -19,8 +19,8 @@
 <main>
 
     <section class="article-page">
-        <div class="container">
-            <div class="article-page__first-screen">
+        <div class="article-page__first-screen">
+            <div class="container">
                 <ul class="site-pagination">
                     <li class="site-pagination__item"><a href="javascript:void(0)">Главная</a></li>
                     <li class="site-pagination__item"><a href="javascript:void(0)">Название раздела</a></li>
@@ -67,7 +67,6 @@
             </div>
             <p>
                 Несмотря на малочисленность муниципалитета и не самое развитое состояние спортивной инфраструктуры, его тхэквондисты могут гордиться высокими спортивными достижениями. Тот, кто приезжал в Духовщину, может сказать, что здесь довольно сложно воспитать спортсмена высокого уровня. Однако своим трудом и высокими спортивными достижениями тренеры и их подопечные опровергают это мнение. Победители и призеры первенств России, участники национальной сборной страны, победители и призеры первенств Европы и мира, всероссийских и международных соревнований — достижения, которыми по праву могут гордиться наши земляки.
-
             </p>
 
             <div class="article-page__lelf-line">
@@ -134,14 +133,183 @@
             <p>
                 Несмотря на малочисленность муниципалитета и не самое развитое состояние спортивной инфраструктуры, его тхэквондисты могут гордиться высокими спортивными достижениями. Тот, кто приезжал в Духовщину, может сказать, что здесь довольно сложно воспитать спортсмена высокого уровня. Однако своим трудом и высокими спортивными достижениями тренеры и их подопечные опровергают это мнение. Победители и призеры первенств России, участники национальной сборной страны, победители и призеры первенств Европы и мира, всероссийских и международных соревнований — достижения, которыми по праву могут гордиться наши земляки.
             </p>
-            <br>
+            <div class="article-page__slider-item">
+                <div class="article-page__slider-wrapper">
+                    <div class="swiper article-page__slider">
+                        <div class="swiper-wrapper">
+                            <a href="img/slider-img.jpg" class="swiper-slide article-page__slide" data-fancybox="slider-2">
+                                <img src="img/slider-img.jpg" alt="">
+                            </a>
+                            <a href="img/slider-img.jpg" class="swiper-slide article-page__slide" data-fancybox="slider-2">
+                                <img src="img/slider-img.jpg" alt="">
+                            </a>
+                            <a href="img/slider-img.jpg" class="swiper-slide article-page__slide" data-fancybox="slider-2">
+                                <img src="img/slider-img.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+                <div class="article-page__slider-descr">Чемпионат Европы среди детей, 2019 г. Сборная России - серебряный призер в командном зачете</div>
+            </div>
 
+            <div class="article-page__slider-item">
+                <div class="article-page__slider-wrapper">
+                    <div class="swiper article-page__slider">
+                        <div class="swiper-wrapper">
+                            <a href="img/slider-img.jpg" class="swiper-slide article-page__slide video-slide" data-fancybox="slider-2">
+                                <img src="img/slider-img.jpg" alt="">
+                            </a>
+                            <a href="img/slider-img.jpg" class="swiper-slide article-page__slide video-slide" data-fancybox="slider-2">
+                                <img src="img/slider-img.jpg" alt="">
+                            </a>
+                            <a href="img/slider-img.jpg" class="swiper-slide article-page__slide video-slide" data-fancybox="slider-2">
+                                <img src="img/slider-img.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+                <div class="article-page__slider-descr">Чемпионат Европы среди детей, 2019 г. Сборная России - серебряный призер в командном зачете</div>
+            </div>
+            <!-- Скрипт для работы 3д модели -->
+            <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+            <div class="article-page__model-wraper">
+                <div class="model__nameplate">3D</div>
+                <!-- Компонент модели. Необходимо указать постер т саму модель в формате glb -->
+                <model-viewer class="article-page__model" alt="" src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" ar poster="https://modelviewer.dev/shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                <div class="article-page__image-descr">Небольшая подпись под фотографией</div>
+            </div>
+
+            <p>Несмотря на малочисленность муниципалитета и не самое развитое состояние спортивной инфраструктуры, его тхэквондисты могут гордиться высокими спортивными достижениями. Тот, кто приезжал в Духовщину, может сказать, что здесь довольно сложно воспитать спортсмена высокого уровня. Однако своим трудом и высокими спортивными достижениями тренеры и их подопечные опровергают это мнение. Победители и призеры первенств России, участники национальной сборной страны, победители и призеры первенств Европы и мира, всероссийских и международных соревнований — достижения, которыми по праву могут гордиться наши земляки.</p>
+
+            <form class="article-form" action="#" method="post">
+                <div class="article-form__title">Остались ли у вас вопросы по теме статьи?</div>
+                <div class="article-form__content">
+                    <label class="article-form__label">
+                        <span class="label-placeholder">Имя</span>
+                        <input type="text" name="name" placeholder=" ">
+                    </label>
+
+                    <label class="article-form__label">
+                        <span class="label-placeholder">Фамилия</span>
+                        <input type="text" name="surname" placeholder=" ">
+                    </label>
+
+                    <label class="article-form__label _textarea">
+                        <span class="label-placeholder">Комментарий</span>
+                        <textarea name=""></textarea>
+                    </label>
+                    <button type="submit" class="submit-btn blue-btn">Отправить</button>
+                </div>
+            </form>
+            <!-- Для отображения результата опроса необходимо добавить класс complited к форме с классом article-survey -->
+            <form class="article-survey " action="#" method="post">
+                <div class="article-form__title _hidden">Спасибо за прохождение опроса!</div>
+                <div class="article-form__title">Что вы знаете о половодье?</div>
+                <div class="article-form__hide-title">Что вы знаете о половодье?</div>
+                <div class="article-form__content">
+                    <label class="article-survey__label">
+                        <input type="radio" name="survey-1" class="survey-radio">
+                        <div class="survey-text">
+                            <div class="survey-text__wrapper">
+                                <span class="survey-answer"> Стихийное бедствие</span>
+                                <div class="survey-precent">87%</div>
+                                <div class="result-progress">
+                                    <div class="result-line" style="width: 87%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="article-survey__label">
+                        <input type="radio" name="survey-1" class="survey-radio">
+                        <div class="survey-text">
+                            <div class="survey-text__wrapper">
+                                <span class="survey-answer"> Это ежегодно повторяющийся в один и тот же сезон года период значительного и относительно продолжительного увеличения водности реки, вызывающее подъем ее уровня.</span>
+                                <div class="survey-precent">7%</div>
+
+                                <div class="result-progress">
+                                    <div class="result-line" style="width: 7%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="article-survey__label">
+                        <input type="radio" name="survey-1" class="survey-radio">
+                        <div class="survey-text">
+                            <div class="survey-text__wrapper">
+                                <span class="survey-answer"> Кратковременное поднятие уровня воды в реке в результате быстрого таяния снега при оттепели или от ливней, которое может случиться в любое время года.</span>
+                                <div class="survey-precent">3%</div>
+                            </div>
+
+                            <div class="result-progress">
+                                <div class="result-line" style="width: 3%;"></div>
+                            </div>
+                        </div>
+                    </label>
+                    <button type="submit" class="submit-btn blue-btn">Ответить</button>
+                </div>
+            </form>
+            <p>
+                Несмотря на малочисленность муниципалитета и не самое развитое состояние спортивной инфраструктуры, его тхэквондисты могут гордиться высокими спортивными достижениями. Тот, кто приезжал в Духовщину, может сказать, что здесь довольно сложно воспитать спортсмена высокого уровня. Однако своим трудом и высокими спортивными достижениями тренеры и их подопечные опровергают это мнение. Победители и призеры первенств России, участники национальной сборной страны, победители и призеры первенств Европы и мира, всероссийских и международных соревнований — достижения, которыми по праву могут гордиться наши земляки.
+            </p>
+
+            <div class="article-page__lelf-line">
+                <div class="lelf-line__content">
+                    <div class="lelf-line__title">В первые послевоенные годы усилия коллектива электростанции были направлены на внедрение новой техники, механизацию и автоматизацию трудоемких процессов, на улучшение технико-экономических показателей. С 1947 года топки котлов электростанции вновь реконструировались. Шатурские энергетики впервые в мире стали сжигать торф в пылевидном состоянии и добились большого успеха. С 1947 по 1967 год на Шатурской ГРЭС была смонтирована система гидродинамического регулирования турбин. Все котлы 2-й и 3-й котельной были оборудованы автоматикой горения, смонтированы щиты управления котлами.</div>
+                    <div class="lelf-line__author">
+                        <div class="author__img">
+                            <img src="img/face-2.jpg" alt="">
+                        </div>
+                        <div class="author__block">
+                            <div class="author__name">Винтер Александр Васильевич</div>
+                            <div class="author__descr">Главный менеджер</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article-page__graf">
+                <div class="infogram-embed" data-id="80486fd2-95c7-4d0c-858f-e500bbd4cf34" data-type="interactive" data-title="Untitled infographic"></div>
+                <script>!function (e, i, n, s) { var t = "InfogramEmbeds", d = e.getElementsByTagName("script")[0]; if (window[t] && window[t].initialized) window[t].process && window[t].process(); else if (!e.getElementById(n)) { var o = e.createElement("script"); o.async = 1, o.id = n, o.src = "https://e.infogram.com/js/dist/embed-loader-min.js", d.parentNode.insertBefore(o, d) } }(document, 0, "infogram-async");</script>
+            </div>
+            <div class="article-page__graf">
+                <div class="infogram-embed" data-id="f1ab0b47-ef6c-48fa-aa97-0dd6605ff014" data-type="interactive" data-title="Untitled infographic"></div>
+                <script>!function (e, i, n, s) { var t = "InfogramEmbeds", d = e.getElementsByTagName("script")[0]; if (window[t] && window[t].initialized) window[t].process && window[t].process(); else if (!e.getElementById(n)) { var o = e.createElement("script"); o.async = 1, o.id = n, o.src = "https://e.infogram.com/js/dist/embed-loader-min.js", d.parentNode.insertBefore(o, d) } }(document, 0, "infogram-async");</script>
+            </div>
+
+            <div class="article-page__graf">
+                <div class="infogram-embed" data-id="6678caf2-5fc8-401c-b530-7ddb9c248e31" data-type="interactive" data-title="Untitled infographic"></div>
+                <script>!function (e, i, n, s) { var t = "InfogramEmbeds", d = e.getElementsByTagName("script")[0]; if (window[t] && window[t].initialized) window[t].process && window[t].process(); else if (!e.getElementById(n)) { var o = e.createElement("script"); o.async = 1, o.id = n, o.src = "https://e.infogram.com/js/dist/embed-loader-min.js", d.parentNode.insertBefore(o, d) } }(document, 0, "infogram-async");</script>
+            </div>
+
+            <ol>
+                <li>В декабре 1965 года Совет Министров СССР принял <br>решение о расширении Шатурской ГРЭ</li>
+                <li>В декабре 1965 года Совет Министров СССР принял решение о расширении Шатурской ГРЭ</li>
+                <li>В декабре 1965 года Совет Министров СССР принял решение <br>о расширении Шатурской ГРЭ</li>
+                <li>В декабре 1965 года Совет Министров СССР принял решение о расширении Шатурской ГРЭ</li>
+                <li>В декабре 1965 года Совет Министров СССР принял решение о расширении Шатурской ГРЭ</li>
+            </ol>
+
+            <ul>
+                <li>В декабре 1965 года Совет Министров СССР принял <br>решение о расширении Шатурской ГРЭ</li>
+                <li>В декабре 1965 года Совет Министров СССР принял решение о расширении Шатурской ГРЭ</li>
+                <li>В декабре 1965 года Совет Министров СССР принял решение <br>о расширении Шатурской ГРЭ</li>
+                <li>В декабре 1965 года Совет Министров СССР принял решение о расширении Шатурской ГРЭ</li>
+                <li>В декабре 1965 года Совет Министров СССР принял решение о расширении Шатурской ГРЭ</li>
+            </ul>
+            <p>
+                Несмотря на малочисленность муниципалитета и не самое развитое состояние спортивной инфраструктуры, его тхэквондисты могут гордиться высокими спортивными достижениями. Тот, кто приезжал в Духовщину, может сказать, что здесь довольно сложно воспитать спортсмена высокого уровня. Однако своим трудом и высокими спортивными достижениями тренеры и их подопечные опровергают это мнение. Победители и призеры первенств России, участники национальной сборной страны, победители и призеры первенств Европы и мира, всероссийских и международных соревнований — достижения, которыми по праву могут гордиться наши земляки.
+            </p>
         </div>
     </section>
 
 </main>
 <footer> </footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.0.5/swiper-bundle.min.js" integrity="sha512-cEcJcdNCHLm3YSMAwsI/NeHFqfgNQvO0C27zkPuYZbYjhKlS9+kqO5hZ9YltQ4GaTDpePDQ2SrEk8gHUVaqxig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <script src="./js/app.min.js"></script>
 
 </html>

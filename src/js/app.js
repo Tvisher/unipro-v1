@@ -1,12 +1,6 @@
 'use strict';
 import * as baseFunction from './modules/functions.js';
 import './vendors/vendors.js';
-import Swiper, {
-    Navigation,
-    Pagination,
-    Autoplay,
-    EffectFade,
-} from 'swiper';
 
 import AOS from 'aos';
 import IMask from 'imask';
@@ -14,7 +8,13 @@ import IMask from 'imask';
 // Проверка поддержки webP
 baseFunction.testWebP();
 
-
+//Инит Fancybox
+Fancybox.bind("[data-fancybox]", {
+    hideScrollbar: false,
+    Image: {
+        zoom: false,
+    },
+});
 
 
 //логика работы меню бургер
@@ -36,7 +36,14 @@ document.querySelectorAll('input[type="tel"]').forEach(input => {
 
 
 
-
+const articleSlider = new Swiper('.article-page__slider', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+})
 
 const audioPlayers = document.querySelectorAll(".article-audio");
 if (audioPlayers.length > 0) {
