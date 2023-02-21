@@ -95,3 +95,7 @@ if (audioPlayers.length > 0) {
 
 
 
+$("[data-toggle-elem]").click(function () {
+    $(this).parent().toggleClass('open')
+    $(this).parent().find("[data-toggle-content]").slideToggle("slow");
+});
