@@ -3381,6 +3381,11 @@ body {
 }
 
 @media (max-width: 576px) {
+  .article-form .article-survey__label .survey-text,
+  .article-survey .article-survey__label .survey-text {
+    padding: 12px;
+  }
+
   .read-more-section .read-more__list,
   .read-more-section .read-more__list-item {
     margin-right: 0;
