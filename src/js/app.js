@@ -2,8 +2,6 @@
 import * as baseFunction from './modules/functions.js';
 import './vendors/vendors.js';
 
-import AOS from 'aos';
-import IMask from 'imask';
 
 // Проверка поддержки webP
 baseFunction.testWebP();
@@ -52,12 +50,6 @@ document.body.addEventListener('click', (e) => {
 
 });
 
-// Маска на номера телефона
-document.querySelectorAll('input[type="tel"]').forEach(input => {
-    const mask = IMask(input, {
-        mask: '+{7}(000) 000-00-00'
-    });
-});
 
 
 
@@ -123,10 +115,10 @@ $("[data-toggle-elem]").click(function () {
 });
 
 
-$("#to-top").click(function () { // ID откуда кливаем
+$("#to-top").click(function () {
     $('html, body').animate({
-        scrollTop: 0 // класс объекта к которому приезжаем
-    }, 1000); // Скорость прокрутки
+        scrollTop: 0
+    }, 1000);
 });
 
 
