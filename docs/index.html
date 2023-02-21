@@ -15,7 +15,28 @@
 </head>
 
 <body>
-    <header> </header>
+    <header>
+        <div class="container">
+            <div class="header__wrapper">
+                <a href="javascript:void(0)" class="header__logo">
+                    <img src="img/heder-logo.svg" alt="">
+                </a>
+                <nav class="header-nav">
+                    <a href="javascript:void(0)" class="header-nav__link">Производство</a>
+                    <a href="javascript:void(0)" class="header-nav__link">Люди</a>
+                    <a href="javascript:void(0)" class="header-nav__link">Безопасность</a>
+                    <a href="javascript:void(0)" class="header-nav__link">Экология</a>
+                    <a href="javascript:void(0)" class="header-nav__link">Благотворительность</a>
+                    <a href="javascript:void(0)" class="header-nav__link">Видео</a>
+                    <a href="javascript:void(0)" class="header-nav__link">Ещё</a>
+                </nav>
+                <div class="header__btns">
+                    <div class="header__btn"></div>
+                    <div class="header__btn"></div>
+                </div>
+            </div>
+        </div>
+    </header>
 <main>
 
     <section class="article-page">
@@ -42,11 +63,11 @@
         <div class="container _small">
             <h2 class="primary__title">В 2021 году исполнилось 25 лет с начала развития в Духовщинском районе олимпийского вида спорта — тхэквондо.</h2>
             <p>
-                Несмотря на малочисленность муниципалитета и не самое развитое состояние спортивной инфраструктуры, его тхэквондисты могут гордиться высокими спортивными достижениями. <span class="tooltip-element">Тот, кто приезжал в Духовщину,</span> может сказать, что здесь довольно сложно воспитать спортсмена высокого уровня. Однако своим трудом и высокими спортивными достижениями тренеры и их подопечные опровергают это мнение. Победители и призеры первенств России, участники национальной сборной страны, победители и призеры первенств Европы и мира, всероссийских и международных соревнований — достижения, которыми по праву могут гордиться наши земляки.
+                Несмотря на малочисленность муниципалитета и не самое развитое состояние спортивной инфраструктуры, его тхэквондисты могут гордиться высокими спортивными достижениями. <span class="tooltip-element" data-content="Подсказка">Тот, кто приезжал в Духовщину,</span> может сказать, что здесь довольно сложно воспитать спортсмена высокого уровня. Однако своим трудом и высокими спортивными достижениями тренеры и их подопечные опровергают это мнение. Победители и призеры первенств России, участники национальной сборной страны, победители и призеры первенств Европы и мира, всероссийских и международных соревнований — достижения, которыми по праву могут гордиться наши земляки.
             </p>
             <p>
                 Духовщинские спортсмены представляют отделение тхэквондо спортивной школы ЦСКА (г. Смоленск). Тренировки проходят в райцентре и в Озерном под руководством Эдуарда Лохманова и мастера спорта Виктории Конабевцевой (воспитанницы духовщинского тхэквондо).
-
+                <span class="tooltip-element" data-content="Подсказка №2">Тот, кто приезжал в Духовщину,</span>
             </p>
             <p>
                 В чем секрет успехов спортсменов? Упорный труд, профессионализм тренерского состава и меценат — компания ПАО «Юнипро». Она на протяжении долгих лет поддерживает развитие этого вида спорта и помогает ему на территории района. Благодаря такому инвестору у ребят есть весь необходимый инвентарь, они могут выезжать на учебно-тренировочные сборы с лучшими командами России и Беларуси, на соревнования всероссийского и международного уровней, а также всегда рассчитывать на помощь в проведении соревнований различного уровня на территории района.
@@ -195,31 +216,38 @@
             <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
             <div class="article-page__model-wraper">
                 <div class="model__nameplate">3D</div>
-                <!-- Компонент модели. Необходимо указать постер т саму модель в формате glb -->
+                <!-- Компонент модели. Необходимо указать постер и саму модель в формате glb -->
                 <model-viewer class="article-page__model" alt="" src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" ar poster="https://modelviewer.dev/shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
                 <div class="article-page__image-descr">Небольшая подпись под фотографией</div>
             </div>
 
             <p>Несмотря на малочисленность муниципалитета и не самое развитое состояние спортивной инфраструктуры, его тхэквондисты могут гордиться высокими спортивными достижениями. Тот, кто приезжал в Духовщину, может сказать, что здесь довольно сложно воспитать спортсмена высокого уровня. Однако своим трудом и высокими спортивными достижениями тренеры и их подопечные опровергают это мнение. Победители и призеры первенств России, участники национальной сборной страны, победители и призеры первенств Европы и мира, всероссийских и международных соревнований — достижения, которыми по праву могут гордиться наши земляки.</p>
 
-            <form class="article-form" action="#" method="post">
+            <form class="article-form" action="#" method="post" id="article-form">
                 <div class="article-form__title">Остались ли у вас вопросы по теме статьи?</div>
                 <div class="article-form__content">
                     <label class="article-form__label">
                         <span class="label-placeholder">Имя</span>
-                        <input type="text" name="name" placeholder=" ">
+                        <input type="text" name="name" placeholder=" " class="_req">
                     </label>
 
                     <label class="article-form__label">
                         <span class="label-placeholder">Фамилия</span>
-                        <input type="text" name="surname" placeholder=" ">
+                        <input type="text" name="surname" placeholder=" " class="_req">
                     </label>
 
                     <label class="article-form__label _textarea">
                         <span class="label-placeholder">Комментарий</span>
-                        <textarea name=""></textarea>
+                        <textarea name="comment" class="_req"></textarea>
                     </label>
                     <button type="submit" class="submit-btn blue-btn">Отправить</button>
+                </div>
+                <div class="submited-modal__wrapper">
+                    <div class="submited-modal">
+                        <div class="submited-modal__close"></div>
+                        <div class="submited-modal__title">Благодарим вас за информацию!</div>
+                        <div class="submited-modal__descr">Это очень нам поможет в развитии нашего портала!</div>
+                    </div>
                 </div>
             </form>
             <!-- Для отображения результата опроса необходимо добавить класс complited к форме с классом article-survey -->
@@ -315,7 +343,7 @@
                 <div class="image-block__content">
                     <h4 class="image-block__title">h4.Заголовок горизонтального вреза</h4>
                     <div class="image-block__descr">В декабре 1965 года Совет Министров СССР принял решение о расширении Шатурской ГРЭС. Мощность станции должна была увеличиться с 132 000 до 730 000 кВт.</div>
-                    <div class="image-block__btn blue-btn">Подробнее</div>
+                    <a href="javascript:void(0)" class="image-block__btn blue-btn">Подробнее</a>
                 </div>
             </div>
             <ul>
@@ -331,11 +359,18 @@
 
             <div class="large-title-block">
                 <div class="large-title-block__title">
-                    1500<span class="large-title-block__small">МВт</span>
+                    1500<span class="large-title-block__small">&nbsp;МВт</span>
                 </div>
                 <div class="large-title-block__descr">общая мощность филиала «Шатурская ГРЭС»</div>
             </div>
 
+
+            <div class="large-title-block _thin">
+                <div class="large-title-block__title">
+                    <span class="large-title-block__small">с&nbsp;</span>2008<span class="large-title-block__small">&nbsp;года</span>
+                </div>
+                <div class="large-title-block__descr">Проект «Юнипрошка — детям»</div>
+            </div>
             <p>
                 Несмотря на малочисленность муниципалитета и не самое развитое состояние спортивной инфраструктуры, его тхэквондисты могут гордиться высокими спортивными достижениями. Тот, кто приезжал в Духовщину, может сказать, что здесь довольно сложно воспитать спортсмена высокого уровня. Однако своим трудом и высокими спортивными достижениями тренеры и их подопечные опровергают это мнение. Победители и призеры первенств России, участники национальной сборной страны, победители и призеры первенств Европы и мира, всероссийских и международных соревнований — достижения, которыми по праву могут гордиться наши земляки.
             </p>
@@ -491,15 +526,109 @@
                 </table>
                 <div class="article-page__table-name">Название таблицы</div>
             </div>
+
+            <div class="article-page__footer">
+                <div class="article-page__share-block">
+                    <div class="share-block__text">Поделитесь в социальных сетях</div>
+                    <div class="share-block__links">
+                        <a href="javascript:void(0)" class="share-block__link">
+                            <img src="img/ok.png" alt="">
+                        </a>
+                        <a href="javascript:void(0)" class="share-block__link">
+                            <img src="img/vk.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="article-page__like-block" onclick="this.classList.add('liked')">
+                    <div class="like-block__ico"></div>
+                    <div class="like-block__title">Было интересно? Поддержите автора!</div>
+                    <div class="like-block__title _hide">Спасибо!</div>
+                </div>
+
+                <div class="article-page__pagination">
+                    <a href="javascript:void(0)" class="pagination__prev">Предыдущий материал</a>
+                    <a href="javascript:void(0)" class="pagination__next">Следующий материал</a>
+                </div>
+            </div>
         </div>
     </section>
-
+    <section class="read-more-section">
+        <div class="container">
+            <h4 class="read-more-section__title">Читайте также</h4>
+            <ul class="read-more__list">
+                <li class="read-more__list-item">
+                    <a href="javascript:void(0)">
+                        <div class="list-item__image">
+                            <img src="img/read-1.jpg" alt="">
+                        </div>
+                        <div class="list-item__title">Поставлен на хозяйство</div>
+                        <div class="list-item__descr">Начальником административного хозяйственного отдела Сургутской ГРЭС-2 назначен Антон Герасимов</div>
+                        <div class="list-item__likes">10</div>
+                    </a>
+                </li>
+                <li class="read-more__list-item">
+                    <a href="javascript:void(0)">
+                        <div class="list-item__image">
+                            <img src="img/read-2.jpg" alt="">
+                        </div>
+                        <div class="list-item__title">Поставлен на хозяйство</div>
+                        <div class="list-item__descr">Начальником административного хозяйственного отдела Сургутской ГРЭС-2 назначен Антон Герасимов </div>
+                        <div class="list-item__likes">10</div>
+                    </a>
+                </li>
+                <li class="read-more__list-item">
+                    <a href="javascript:void(0)">
+                        <div class="list-item__image">
+                            <img src="img/read-3.jpg" alt="">
+                        </div>
+                        <div class="list-item__title">Поставлен на хозяйство</div>
+                        <div class="list-item__descr">Начальником административного хозяйственного отдела Сургутской ГРЭС-2 назначен Антон Герасимов</div>
+                        <div class="list-item__likes">10</div>
+                    </a>
+                </li>
+                <li class="read-more__list-item">
+                    <a href="javascript:void(0)">
+                        <div class="list-item__image">
+                            <img src="img/read-4.jpg" alt="">
+                        </div>
+                        <div class="list-item__title">Поставлен на хозяйство</div>
+                        <div class="list-item__descr">Начальником административного хозяйственного отдела Сургутской ГРЭС-2 назначен Антон Герасимов</div>
+                        <div class="list-item__likes">10</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
 </main>
-<footer> </footer>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <a href="#" class="footer__logo">
+                <img src="img/footer-logo.svg" alt="">
+            </a>
+            <div class="footer__text">
+                2013 – 2023 «Юнипро»<br>
+                <a href="javascript:void(0)">Пользовательское соглашение<a>
+            </div>
+            <a href="#" class="footer__btn">ЮНИПРО</a>
+            <div class="footer__dev">Сделано в MediaLine</div>
+            <div class="footer__to-top" id="to-top">
+                НАВЕРХ
+                <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 7.25V8.75L6 2.25V15.75H7V2.25L13 8.75V7.25L6.5 0.25L0 7.25Z" fill="white" />
+                </svg>
+            </div>
+            <div class="footer__box">18+</div>
+        </div>
+    </div>
+</footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.0.5/swiper-bundle.min.js" integrity="sha512-cEcJcdNCHLm3YSMAwsI/NeHFqfgNQvO0C27zkPuYZbYjhKlS9+kqO5hZ9YltQ4GaTDpePDQ2SrEk8gHUVaqxig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
 <script src="./js/app.min.js"></script>
 
 </html>

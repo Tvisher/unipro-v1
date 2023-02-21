@@ -17,7 +17,24 @@ Fancybox.bind("[data-fancybox]", {
 });
 
 
-//логика работы меню бургер
+const tippyElems = tippy(document.querySelectorAll('.tooltip-element'), {
+    hideOnClick: true,
+    interactive: true,
+    allowHTML: true,
+    placement: 'bottom',
+    trigger: "click",
+    content(reference) {
+        const content = reference.getAttribute('data-content');
+        return `<div class="tippy-wrapper">
+                    ${content}
+                    <div class="close-tippy"></div>
+                </div>`;
+    }
+});
+
+
+
+
 document.body.addEventListener('click', (e) => {
     const target = e.target;
     if (target.closest('[data-burger-menu]')) {
@@ -25,6 +42,14 @@ document.body.addEventListener('click', (e) => {
         document.querySelector('[data-header-menu]').classList.toggle('active');
         document.body.classList.toggle('hidden');
     }
+    if (target.closest('.close-tippy')) {
+        tippyElems.forEach(item => item.hide());
+    }
+    if ((target.closest('.submited-modal__wrapper') && !target.closest('.submited-modal')) || target.closest('.submited-modal__close')) {
+        target.closest('.article-form').classList.remove('submited');
+    }
+
+
 });
 
 // Маска на номера телефона
@@ -50,7 +75,6 @@ if (audioPlayers.length > 0) {
     audioPlayers.forEach(audioPlayer => {
         const filePath = audioPlayer.dataset.href;
         const audio = new Audio(filePath);
-        console.dir(audio);
         audio.addEventListener("loadeddata", () => audio.volume = 1, false);
         //click on timeline to skip around
         const timeline = audioPlayer.querySelector(".timeline");
@@ -93,9 +117,53 @@ if (audioPlayers.length > 0) {
 }
 
 
-
-
 $("[data-toggle-elem]").click(function () {
     $(this).parent().toggleClass('open')
     $(this).parent().find("[data-toggle-content]").slideToggle("slow");
 });
+
+
+$("#to-top").click(function () { // ID откуда кливаем
+    $('html, body').animate({
+        scrollTop: 0 // класс объекта к которому приезжаем
+    }, 1000); // Скорость прокрутки
+});
+
+
+
+const articleForm = document.querySelector('#article-form');
+articleForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const reqFields = articleForm.querySelectorAll('._req');
+
+    reqFields.forEach(field => {
+        if (field.value.trim().length < 1) field.classList.add('_error');
+        field.addEventListener('focus', (e) => {
+            if (field.classList.contains('_error')) {
+                field.classList.remove('_error')
+            }
+        }, { once: true });
+    });
+
+    const errorFields = articleForm.querySelectorAll('._error');
+    if (errorFields.length == 0) {
+        articleForm.classList.add('submited');
+        articleForm.reset();
+    }
+
+});
+
+
+const articleSurveys = document.querySelectorAll('.article-survey');
+articleSurveys.forEach(articleSurvey => {
+    articleSurvey.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const surveyInputs = Array.from(articleSurvey.querySelectorAll('input[type="radio"]'));
+        if (surveyInputs.filter(item => item.checked).length > 0) {
+            articleSurvey.classList.add('complited')
+        }
+    });
+})
+
+
+
