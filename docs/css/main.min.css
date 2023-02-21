@@ -2031,6 +2031,7 @@ body {
 }
 
 .article-page__lelf-line .lelf-line__content .author__img {
+  flex-shrink: 0;
   margin-right: 20px;
   width: 60px;
   height: 60px;
@@ -2423,6 +2424,7 @@ body {
 
 .article-form .article-form__content .article-form__label._textarea textarea,
 .article-survey .article-form__content .article-form__label._textarea textarea {
+  border-radius: 5px;
   padding: 10px;
   resize: vertical;
   background: #ffffff;
@@ -2972,6 +2974,10 @@ body {
 
 .article-page__like-block .like-block__title._hide {
   display: none;
+}
+
+.article-page__like-block.liked {
+  justify-content: center;
 }
 
 .article-page__like-block.liked .like-block__title {

@@ -269,6 +269,7 @@ body {
       align-items: center;
     }
     .author__img {
+      flex-shrink: 0;
       margin-right: 20px;
       width: 60px;
       height: 60px;
@@ -612,6 +613,7 @@ body {
           &._error {
             border-color: red;
           }
+          border-radius: 5px;
           padding: 10px;
           resize: vertical;
           background: #ffffff;
@@ -1117,6 +1119,7 @@ body {
     }
   }
   &.liked {
+    justify-content: center;
     .like-block__title {
       display: none;
       &._hide {
