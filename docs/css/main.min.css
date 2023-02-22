@@ -2601,6 +2601,7 @@ body {
 }
 
 .article-survey.complited .survey-text {
+  padding-left: 0;
   background-color: transparent !important;
   border-color: transparent !important;
 }
