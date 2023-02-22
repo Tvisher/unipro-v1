@@ -729,6 +729,11 @@ body {
   .submit-btn {
     margin-top: 15px;
   }
+  .article-form__title {
+    &._hidden {
+      display: none;
+    }
+  }
   &.complited {
     .submit-btn {
       display: none;
@@ -1214,6 +1219,7 @@ body {
     align-items: center;
   }
   .close-tippy {
+    flex-shrink: 0;
     cursor: pointer;
     margin-left: 20px;
     width: 14px;
@@ -1468,6 +1474,9 @@ body {
 }
 
 @media (max-width: 576px) {
+  .article-page .tippy-box {
+    padding: 12px;
+  }
   .article-form .article-survey__label .survey-text,
   .article-survey .article-survey__label .survey-text {
     padding: 12px;

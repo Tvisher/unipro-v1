@@ -31,8 +31,6 @@ const tippyElems = tippy(document.querySelectorAll('.tooltip-element'), {
 });
 
 
-
-
 document.body.addEventListener('click', (e) => {
     const target = e.target;
     if (target.closest('[data-burger-menu]')) {
