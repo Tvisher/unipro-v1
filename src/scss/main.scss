@@ -1335,40 +1335,6 @@ body {
   }
 }
 
-.header__wrapper {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 20px 0;
-}
-
-.header__logo {
-  width: 200px;
-  height: 40px;
-  margin-right: 35px;
-}
-
-.header-nav {
-  display: flex;
-  .header-nav__link {
-    margin-right: 15px;
-    text-transform: uppercase;
-    color: #333;
-    letter-spacing: 0.5px;
-    font-weight: 600;
-    font-size: 16px;
-  }
-}
-
-.header__btns {
-  background-color: $brand-primary;
-  margin-top: -20px;
-  margin-bottom: -20px;
-  width: 164px;
-  margin-left: auto;
-  height: 80px;
-}
-
 @media (max-width: 1320px) {
   .read-more-section .read-more__list-item {
     width: calc(50% - 40px);
@@ -1564,3 +1530,84 @@ body {
     padding: 20px 10px;
   }
 }
+// ---------
+// ---------
+// ---------
+// ---------
+// ---------
+// ---------
+// ---------
+// ---------
+// ---------
+// ---------
+// ---------
+// ---------
+// ---------
+// .header__wrapper {
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   padding: 20px 0;
+// }
+
+// .header__logo {
+//   width: 200px;
+//   height: 40px;
+//   margin-right: 35px;
+//   flex-shrink: 0;
+// }
+
+// .header-nav {
+//   display: flex;
+//   .header-nav__link {
+//     margin-right: 15px;
+//     text-transform: uppercase;
+//     color: #333;
+//     letter-spacing: 0.5px;
+//     font-weight: 600;
+//     font-size: 16px;
+//   }
+// }
+
+// .header__btns {
+//   background-color: $brand-primary;
+//   margin-top: -20px;
+//   margin-bottom: -20px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   width: 164px;
+//   flex-shrink: 0;
+//   margin-left: auto;
+//   height: 80px;
+//   .header__btn {
+//     cursor: pointer;
+//     width: 50%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+// }
+// .header-container {
+//   max-width: 1440px;
+// }
+
+// .header-nav__link {
+//   position: relative;
+//   &:hover {
+//     .inner-menu {
+//       opacity: 1;
+//       visibility: visible;
+//     }
+//   }
+//   .inner-menu {
+//     opacity: 0;
+//     visibility: hidden;
+//     position: absolute;
+//     right: 0;
+//     top: 25px;
+//     background-color: #fff;
+//     padding: 10px;
+//     width: 150px;
+//   }
+// }
