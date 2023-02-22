@@ -876,6 +876,7 @@ body {
   padding: 20px;
   background: linear-gradient(255.85deg, #078eff -132.64%, #e7f4ff 35.25%);
   &._thin {
+    margin-top: 60px !important;
     .large-title-block__title {
       margin-top: -45px;
     }
