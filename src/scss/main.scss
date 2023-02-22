@@ -490,7 +490,8 @@ body {
   }
   .article-page__slide {
     height: 400px;
-    img {
+    img,
+    video {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -572,6 +573,7 @@ body {
   background: linear-gradient(255.85deg, #078eff -132.64%, #e7f4ff 35.25%);
 
   .article-form__title {
+    line-height: 120%;
     font-weight: 500;
     font-size: 30px;
     color: #333333;
